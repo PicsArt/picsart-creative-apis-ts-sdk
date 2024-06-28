@@ -1,0 +1,14 @@
+# Add files here to ignore them from eslint formatting
+
+/dist
+/coverage
+/build
+/public
+/node-modules
+
+.storybook/
+.idea/
+.husky/
+.jest/
+.github/
+

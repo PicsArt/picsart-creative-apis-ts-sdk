@@ -1,0 +1,25 @@
+{
+  "name": "picsart-creative-apis-sdk",
+  "entryPoints": [
+    "./src"
+  ],
+  "out": "./docs",
+  "plugin": [
+    "typedoc-plugin-missing-exports"
+  ],
+  "excludePrivate": true,
+  "excludeInternal": true,
+  "excludeExternals": true,
+  "categoryOrder": [
+    "Get API Instance",
+    "APIs",
+    "Requests",
+    "Results",
+    "Enums"
+  ],
+  "navigation": {
+    "includeCategories": true
+  },
+  "hideGenerator": true,
+  "hideParameterTypesInTitle": false
+}

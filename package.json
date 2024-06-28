@@ -1,0 +1,57 @@
+{
+  "name": "picsart-creative-apis-ts-sdk",
+  "version": "1.0.0",
+  "contributors": [],
+  "author": "PicsArt, Inc.",
+  "homepage": "https://picsart.io",
+  "license": "https://github.com/PicsArt/picsart-creative-apis-ts-sdk/blob/main/LICENSE.txt",
+  "description": "Picsart Creative APIs SDK. Includes helper methods and functions for Programmable Image APIs (e.g. Remove Background, Upscale, Enhance, Effects) and the GenAI APIs (e.g. Text2Image, Replace, Expand Image).",
+  "repository": "https://github.com/PicsArt/picsart-creative-apis-ts-sdk",
+  "sideEffects": false,
+  "browser": "./index",
+  "main": "./index.js",
+  "module": "./index.mjs",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "require": {
+        "types": "./index.d.ts",
+        "default": "./index.js"
+      },
+      "import": {
+        "types": "./index.d.ts",
+        "default": "./index.mjs"
+      }
+    }
+  },
+  "scripts": {
+    "example": "PICSART_API_KEY={YOUR API KEY GOES HERE} IMAGE_URL=https://pastatic.picsart.com/cms-pastatic/eada7ab2-4ec4-4045-bdba-077ec7dfb0c1.jpg ts-node examples/upload.example.ts",
+    "test": "vitest run",
+    "lint": "eslint .",
+    "build": "./scripts/build.sh",
+    "generate-docs": "./scripts/docs.sh"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.22.10",
+    "@babel/core": "^7.22.10",
+    "@babel/preset-env": "^7.22.10",
+    "@babel/preset-typescript": "^7.22.5",
+    "@faker-js/faker": "^8.4.1",
+    "@types/node": "^20.13.0",
+    "@typescript-eslint/eslint-plugin": "^7.11.0",
+    "@typescript-eslint/parser": "^7.11.0",
+    "babel-plugin-add-import-extension": "^1.6.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-unused-imports": "^3.2.0",
+    "prettier": "^3.2.5",
+    "typedoc-plugin-missing-exports": "^2.2.0",
+    "vitest": "^1.6.0"
+  },
+  "dependencies": {
+    "axios": "^1.7.2",
+    "axios-retry": "^4.3.0",
+    "form-data": "^4.0.0",
+    "yup": "^1.4.0"
+  }
+}

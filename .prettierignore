@@ -1,0 +1,18 @@
+# Add files here to ignore them from prettier formatting
+/dist
+/coverage
+/build
+/public
+/node-modules
+/helm
+
+.idea/
+.husky/
+.jest/
+.github/
+pnpm-lock.yaml
+
+**/*.json
+
+examples/
+.eslintrc.js
