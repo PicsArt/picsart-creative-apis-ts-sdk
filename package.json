@@ -29,6 +29,7 @@
     "test": "vitest run",
     "lint": "eslint .",
     "build": "./scripts/build.sh",
+    "license": "./scripts/license.sh",
     "generate-docs": "./scripts/docs.sh"
   },
   "devDependencies": {

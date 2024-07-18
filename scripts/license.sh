@@ -2,6 +2,15 @@
 
 SED=$(command -v gsed || command -v sed)
 
+if [[ "$OSTYPE" == "darwin"* ]]; then
+  #  MAC OSX
+  if ! command -v gsed &> /dev/null
+  then
+      echo "gsed command must be installed"
+      exit 1
+  fi
+fi
+
 function process {
   echo $1
   if grep -q Copyright  $1

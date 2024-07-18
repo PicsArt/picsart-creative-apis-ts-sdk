@@ -210,6 +210,25 @@ npm run build
 ```
 It will create `/lib` directory in the root directory of the project which will contain ready to publish npm package.
 
+#### _Adding boilerplate license notice_ 
+Run the following command to add the boilerplate license notice in all *.ts files:
+```bash
+npm run license
+```
+This command will not only add the header to all new files, but will also fix existing files if there is a need.
+
+To be able to run this on macOS, you need to install GNU sed. If you haven't installed it yet, follow these steps:
+
+1. **Install Homebrew**: If you don't have Homebrew installed, open Terminal and run:
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+```
+
+2. **Install GNU sed**: Once Homebrew is installed, run the following command to install GNU sed:
+```bash
+brew install gnu-sed
+```
+
 ## _Generating API References_
 API references are generated using TypeDoc based on TSDoc comments in the code.
 Run the following command to generate it:

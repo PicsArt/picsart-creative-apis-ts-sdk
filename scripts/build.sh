@@ -16,9 +16,6 @@ export PACKAGE_OUTPUT_PATH="$dir"
 rm -rf "$dir"
 mkdir -p "$dir"
 
-# Add license headers
-./scripts/license.sh
-
 # Transpile ESM versions of files
 env BABEL_ENV=esm npx babel src \
   --config-file ./babel.config.js \
