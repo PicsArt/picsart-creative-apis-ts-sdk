@@ -1,0 +1,8 @@
+name: Auto build
+
+jobs:
+  build:
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
