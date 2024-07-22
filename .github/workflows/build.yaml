@@ -1,9 +1,14 @@
 name: Auto Build
 
+
 on:
-  push:
-    branches:
-      - '**'
+  release:
+    types: [created]
+
+#on:
+#  push:
+#    branches:
+#      - '**'
 
 jobs:
   build:
@@ -26,3 +31,9 @@ jobs:
 
       - name: Run license
         run: npm run license
+
+      - name: Generate API References
+        run: npm run generate-docs
+
+      - name: Run Tests
+        run: npm test
