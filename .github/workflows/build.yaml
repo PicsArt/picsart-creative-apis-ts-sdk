@@ -40,7 +40,6 @@ jobs:
 
       - name: Configure npm for publishing
         run: |
-            echo "@picsart:registry=https://registry.npmjs.org/" >> ~/.npmrc
             echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
       
 
