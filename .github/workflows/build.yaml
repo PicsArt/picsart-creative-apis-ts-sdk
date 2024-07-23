@@ -39,7 +39,10 @@ jobs:
         run: npm test
 
       - name: Configure npm for publishing
-        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+        run: |
+            echo "@picsart:registry=https://registry.npmjs.org/" >> ~/.npmrc
+            echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" >> ~/.npmrc
+      
 
       - name: Publish to npm
         env:
