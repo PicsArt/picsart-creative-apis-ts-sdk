@@ -1,14 +1,14 @@
 name: Auto Build
 
 
-on:
-  release:
-    types: [created]
-
 #on:
-#  push:
-#    branches:
-#      - '**'
+#  release:
+#    types: [created]
+
+on:
+  push:
+    branches:
+      - '**'
 
 jobs:
   build:
@@ -37,6 +37,9 @@ jobs:
 
       - name: Run Tests
         run: npm test
+
+      - name: Configure npm for publishing
+        run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
 
       - name: Publish to npm
         env:
