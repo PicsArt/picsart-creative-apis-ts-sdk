@@ -24,7 +24,7 @@ jobs:
           node-version: '16'
 
       - name: Install dependencies
-        run: npm install
+        run: npm i picsart-creative-apis-ts-sdk
 
       - name: Run build
         run: npm run build
